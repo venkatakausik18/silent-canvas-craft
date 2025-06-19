@@ -8,6 +8,14 @@ import { useAuth } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
+import Companies from "./pages/Companies";
+import Customers from "./pages/Customers";
+import Vendors from "./pages/Vendors";
+import Products from "./pages/Products";
+import Warehouses from "./pages/Warehouses";
+import Inventory from "./pages/Inventory";
+import Orders from "./pages/Orders";
+import Shipments from "./pages/Shipments";
 import Layout from "./components/layout/Layout";
 import NotFound from "./pages/NotFound";
 
@@ -40,6 +48,62 @@ const App = () => (
             <ProtectedRoute>
               <Layout>
                 <Dashboard />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/companies" element={
+            <ProtectedRoute>
+              <Layout>
+                <Companies />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/customers" element={
+            <ProtectedRoute>
+              <Layout>
+                <Customers />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/suppliers" element={
+            <ProtectedRoute>
+              <Layout>
+                <Vendors />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/products" element={
+            <ProtectedRoute>
+              <Layout>
+                <Products />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/warehouses" element={
+            <ProtectedRoute>
+              <Layout>
+                <Warehouses />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/inventory" element={
+            <ProtectedRoute>
+              <Layout>
+                <Inventory />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/orders" element={
+            <ProtectedRoute>
+              <Layout>
+                <Orders />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/shipments" element={
+            <ProtectedRoute>
+              <Layout>
+                <Shipments />
               </Layout>
             </ProtectedRoute>
           } />
