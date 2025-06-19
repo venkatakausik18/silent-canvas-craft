@@ -1,10 +1,13 @@
 
 import React from 'react';
-import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
 
-const Layout = () => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex h-screen bg-gray-100">
       <Sidebar />
@@ -12,7 +15,7 @@ const Layout = () => {
         <Header />
         <main className="flex-1 overflow-y-auto">
           <div className="p-6">
-            <Outlet />
+            {children}
           </div>
         </main>
       </div>
